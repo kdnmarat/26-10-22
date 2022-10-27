@@ -92,5 +92,25 @@ namespace FunWithWindowsForms
                 tbLength.Text = c.ToString("0.####");
             }
         }
+
+        private void btnLegend_Click(object sender, EventArgs e)
+        {
+            if (pnlLegend.Visible)
+            {
+                pnlLegend.Visible = false;
+                this.MinimumSize = new Size(242, 340);
+                this.MaximumSize = new Size(242, 340);
+                this.Size = new Size(242, 340);
+                btnLegend.Text = "Show legend =>";
+            }
+            else
+            {
+                pnlLegend.Visible = true;
+                this.MinimumSize = new Size(520, 340);
+                this.MaximumSize = new Size(520, 340);
+                this.Size = new Size(520, 340);
+                btnLegend.Text = "Hide legend <=";
+            }
+        }
     }
 }

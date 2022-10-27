@@ -28,36 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnLegend = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tbArea = new System.Windows.Forms.TextBox();
             this.tbLength = new System.Windows.Forms.TextBox();
             this.tbRadius = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlLegend = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlMain.SuspendLayout();
+            this.pnlLegend.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlMain
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.tbArea);
-            this.panel1.Controls.Add(this.tbLength);
-            this.panel1.Controls.Add(this.tbRadius);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 453);
-            this.panel1.TabIndex = 0;
+            this.pnlMain.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlMain.Controls.Add(this.btnLegend);
+            this.pnlMain.Controls.Add(this.button1);
+            this.pnlMain.Controls.Add(this.tbArea);
+            this.pnlMain.Controls.Add(this.tbLength);
+            this.pnlMain.Controls.Add(this.tbRadius);
+            this.pnlMain.Controls.Add(this.label3);
+            this.pnlMain.Controls.Add(this.label2);
+            this.pnlMain.Controls.Add(this.label1);
+            this.pnlMain.Location = new System.Drawing.Point(5, 5);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(217, 292);
+            this.pnlMain.TabIndex = 0;
+            // 
+            // btnLegend
+            // 
+            this.btnLegend.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLegend.Location = new System.Drawing.Point(96, 249);
+            this.btnLegend.Name = "btnLegend";
+            this.btnLegend.Size = new System.Drawing.Size(96, 23);
+            this.btnLegend.TabIndex = 7;
+            this.btnLegend.Text = "Hide legend <=";
+            this.btnLegend.UseVisualStyleBackColor = false;
+            this.btnLegend.Click += new System.EventHandler(this.btnLegend_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(107, 379);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // tbArea
             // 
@@ -116,19 +140,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "R:";
             // 
-            // panel2
+            // pnlLegend
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlLegend.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(228, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(271, 453);
-            this.panel2.TabIndex = 1;
+            this.pnlLegend.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlLegend.Controls.Add(this.label6);
+            this.pnlLegend.Controls.Add(this.label5);
+            this.pnlLegend.Controls.Add(this.label4);
+            this.pnlLegend.Location = new System.Drawing.Point(228, 5);
+            this.pnlLegend.Name = "pnlLegend";
+            this.pnlLegend.Size = new System.Drawing.Size(273, 292);
+            this.pnlLegend.TabIndex = 1;
             // 
             // label6
             // 
@@ -156,40 +180,46 @@
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(14, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 19);
+            this.label4.Size = new System.Drawing.Size(134, 19);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Radius";
+            this.label4.Text = "Radius of the circle";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 478);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(504, 301);
+            this.Controls.Add(this.pnlLegend);
+            this.Controls.Add(this.pnlMain);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(520, 340);
+            this.MinimumSize = new System.Drawing.Size(520, 340);
             this.Name = "MainForm";
-            this.Text = "MainForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.ShowIcon = false;
+            this.Text = "CircleCalc";
+            this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
+            this.pnlLegend.ResumeLayout(false);
+            this.pnlLegend.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.TextBox tbArea;
         private System.Windows.Forms.TextBox tbLength;
         private System.Windows.Forms.TextBox tbRadius;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlLegend;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnLegend;
+        private System.Windows.Forms.Button button1;
     }
 }
 
